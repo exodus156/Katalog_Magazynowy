@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Strona Główna";
+}
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <h1>Katalog Magazynowy</h1>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="text-center">
+        <h3>Witajcie w katalogu magazynowym!</h3>
+        <h4>Instrukcja obsługi jest dosyć prosta:</h4>
+    </div>
+    <br />
+    <ul>
+        <li>Opisy elementów są opcjonalne</li>
+        <li>Najpierw tworzymy nową kategorię</li>
+        <li>Później tworzymy nowy typ</li>
+        <li>Następnie tworzymy nowy rodzaj</li>
+        <li>Na koniec tworzymy nowy przedmiot</li>
+    </ul>
+    <hr />
+    <h4 class="text-center">Instrukcja tworzenia nowego przedmiotu:</h4>
+    <br />
+    <ul>
+        <li>Nazwa może byc dowolna</li>
+        <li>Kategorię, rodzaj i typ wybieramy z listy utworzonych uprzednio elementów</li>
+        <li>Wybieramy liczbę przedmiotów (conajmniej 1)</li>
+        <li>Ustalamy cenę z groszami lub bez (conajmniej 0,01)</li>
+        <li>
+            Określamy numer seryjny przedmiotu (2 pierwsze litery nazwy kategorii,
+            2 pierwsze litery nazwy rodzaju i 2 pierwsze litery nazwy typu oraz
+            6 unikalnych cyfr)
+        </li>
+        <li>Gdy któreś z naszych elementów ma więcej niż jedno słowo wybieramy PIERWSZĄ literę z pierwszych DWÓCH słów</li>
+        <li>
+            Schematycznie kod seryjny wygląda tak: KKTTRR000000, gdzie K oznacza kategorię,
+            T oznacza typ, a R oznacza rodzaj
+        </li>
+    </ul>
+    <hr />
+    <h4 class="text-center">Dodatkowe informacje o elementach:</h4>
+    <br />
+    <ul>
+        <li>Kategoria, to np.: Urządenie, Środki chemiczne, Środki spożywcze</li>
+        <li>Typ, to precyzyjniejsze określenie kategorii, np.: Maszyny ogrodnicze, Środki czystości, Pożywienie dla ludzi</li>
+        <li>Rodzaj, to najprecyzyjniejsze określenie rodzaju i kategorii przedmiotu, np.: Kosiarka, Środki do mycia podłóg, Owoce</li>
+    </ul>
+</div>

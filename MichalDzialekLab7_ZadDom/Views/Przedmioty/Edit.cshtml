@@ -1,0 +1,74 @@
+﻿@model MichalDzialekLab7_ZadDom.Models.Przedmiot
+
+@{
+    ViewData["Title"] = "Edytuj";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edytuj</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Nazwa" class="control-label"></label>
+                <input asp-for="Nazwa" class="form-control" />
+                <span asp-validation-for="Nazwa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KategoriaID" class="control-label"></label>
+                <select asp-for="KategoriaID" class="form-control" asp-items="ViewBag.KategoriaID"></select>
+                <span asp-validation-for="KategoriaID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypID" class="control-label"></label>
+                <select asp-for="TypID" class="form-control" asp-items="ViewBag.TypID"></select>
+                <span asp-validation-for="TypID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RodzajID" class="control-label"></label>
+                <select asp-for="RodzajID" class="form-control" asp-items="ViewBag.RodzajID"></select>
+                <span asp-validation-for="RodzajID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ilosc" class="control-label"></label>
+                <input asp-for="Ilosc" class="form-control" />
+                <span asp-validation-for="Ilosc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SerialNumber" class="control-label"></label>
+                <input asp-for="SerialNumber" class="form-control" />
+                <span asp-validation-for="SerialNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreationDate" class="control-label"></label>
+                <input asp-for="CreationDate" class="form-control" />
+                <span asp-validation-for="CreationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Zapisz" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Powrót</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
